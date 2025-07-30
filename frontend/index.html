@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fake Identity</title>
+</head>
+<body>
+  <h1>Fake Identity Generator</h1>
+  <button onclick="fetchData()">Get Fake Data</button>
+  <pre id="output"></pre>
+
+  <script>
+    async function fetchData() {
+      const response = await fetch("/api/fake");
+      const data = await response.json();
+      document.getElementById("output").textContent = JSON.stringify(data, null, 2);
+    }
+  </script>
+</body>
+</html>
