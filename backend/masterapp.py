@@ -15,5 +15,3 @@ def generate_fake_identity():
 def get_fake_data():
     return jsonify(generate_fake_identity())
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0')
